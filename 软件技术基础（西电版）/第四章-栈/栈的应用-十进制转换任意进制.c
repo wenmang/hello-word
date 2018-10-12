@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include <stdlib.h>
+#define ERROR -1234567
 
 
 typedef int elementType;
