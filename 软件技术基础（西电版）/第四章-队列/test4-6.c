@@ -8,12 +8,12 @@ typedef int elementType;
 typedef struct QNode* Queue;
 struct QNode{
     elementType data[MAXSIZE];
-    int quelen;	// ÄÚº¬ÔªËØ¸öÊý 
-    int rear;	// ¶ÓÎ²ÔªËØ 
+    int quelen;	// Ã„ÃšÂºÂ¬Ã”ÂªÃ‹Ã˜Â¸Ã¶ÃŠÃ½ 
+    int rear;	// Â¶Ã“ÃŽÂ²Ã”ÂªÃ‹Ã˜ 
 };
 
 
-Queue CreateQueue (int maxSize){    // ´´½¨ÐÂ¶ÓÁÐ
+Queue CreateQueue (int maxSize){    // Â´Â´Â½Â¨ÃÃ‚Â¶Ã“ÃÃ
     Queue queue;
     queue = malloc(sizeof(struct QNode)*maxSize);
     queue->quelen = queue->rear = 0;
@@ -26,14 +26,14 @@ int IsFull (Queue Q){
 }
 
 
-int IsEmpty (Queue Q) {   // ÅÐ¶Ï¶ÓÁÐÊÇ·ñ¿Õ
+int IsEmpty (Queue Q) {   // Ã…ÃÂ¶ÃÂ¶Ã“ÃÃÃŠÃ‡Â·Ã±Â¿Ã•
     return Q->quelen == 0;
 }
 
 
-void AddQ (Queue QtrS, elementType item){   // Èë¶Ó
+void AddQ (Queue QtrS, elementType item){   // ÃˆÃ«Â¶Ã“
     if (IsFull(QtrS)){
-        printf("¶ÓÁÐÂú£¡");
+        printf("Â¶Ã“ÃÃÃ‚ÃºÂ£Â¡");
         return;
     } else {
         QtrS->rear = (QtrS->rear+1) % MAXSIZE;
@@ -43,9 +43,9 @@ void AddQ (Queue QtrS, elementType item){   // Èë¶Ó
 }
 
 
-elementType Delete (Queue QtrS){   // ³ö¶Ó
+elementType Delete (Queue QtrS){   // Â³Ã¶Â¶Ã“
     if (IsEmpty(QtrS)){
-        printf("¶ÓÁÐ¿Õ£¡");
+        printf("Â¶Ã“ÃÃÂ¿Ã•Â£Â¡");
         return ERROR;
     } else {
     	QtrS->quelen--;
