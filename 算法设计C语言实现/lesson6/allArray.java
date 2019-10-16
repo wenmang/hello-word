@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class fullArray {
+class fullArray {
     public List<List<Integer>> fullArray(int n) {
         List<List<Integer>> ret = new LinkedList<>();
         ArrayList<Integer> nums = new ArrayList<>();
@@ -24,7 +24,7 @@ public class fullArray {
     }
 
     public static void main(String[] args) {
-        Test1 test = new fullArray();
+        fullArray test = new fullArray();
         List<List<Integer>> ret = test.fullArray(4);
         for (List i:ret)
             System.out.println(i);
